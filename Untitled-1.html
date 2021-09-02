@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .calculator {
+            width: 400px;
+            margin-left: 400px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 40px;
+            background-color: rebeccapurple;
+            border-radius: 10px;
+
+        }
+
+        input {
+            margin-bottom: 40px;
+            flex-basis: 100%;
+            max-width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: darkkhaki;
+            color: #ffffff;
+            font-size: 35px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: black;
+            box-sizing: border-box;
+            color: #fff;
+            flex-basis: 20%;
+            max-width: 20%;
+            padding: 10px;
+            border-radius: 7px;
+            font-size: 30px;
+        }
+
+        .equal {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
+        .ali {
+            background-image: url("IMG20210605165242-removebg-preview.png");
+
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main class="ali">
+        <div class="calculator">
+            <input type="text" id="display"><br>
+            <button onclick="one()">1</button>
+            <button onclick="two()">2</button>
+            <button onclick="three()">3</button>
+            <button onclick="four()">4</button>
+            <button onclick="fiv()">5</button>
+            <button onclick="six()">6</button>
+            <button onclick="sev()">7</button>
+            <button onclick="eig()">8</button>
+            <button onclick="nin()">9</button>
+            <button onclick="zero()">0</button>
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="dev()">/</button>
+            <button onclick="mul()">x</button>
+            <button onclick="clr()">Clr</button>
+            <button onclick="equal()" class="equal">=</button>
+
+        </div>
+    </main>
+    <script>
+        const input = document.getElementById('display');
+        function one() {
+            input.value += 1;
+        }
+        function two() {
+            input.value += 2;
+        }
+        function three() {
+            input.value += 3;
+        }
+        function four() {
+            input.value += 4;
+        }
+        function fiv() {
+            input.value += 5;
+        }
+        function six() {
+            input.value += 6;
+        }
+        function sev() {
+            input.value += 7;
+        }
+        function eig() {
+            input.value += 8;
+        }
+        function nin() {
+            input.value += 9;
+        }
+        function zero() {
+            input.value += 0;
+        }
+        function add() {
+            input.value += "+";
+        }
+        function sub() {
+            input.value += "-";
+        }
+        function dev() {
+            input.value += "/";
+        }
+        function mul() {
+            input.value += "*";
+        }
+        function clr() {
+            input.value = "";
+        }
+        function equal() {
+            var calculate = eval(input.value);
+            input.value = calculate;
+
+        }
+
+
+    </script>
+</body>
+
+</html>
